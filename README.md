@@ -41,6 +41,7 @@ Things you may want to cover:
 ### Association
 
 - has_many :items
+- has_many :buyers
 
 ## items テーブル
 
@@ -58,8 +59,8 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :users
-- has_one :buyers
+- belongs_to :user
+- has_one :buyer
 
 
 ## buyers テーブル
@@ -67,8 +68,26 @@ Things you may want to cover:
 | Column              | Type       | Options            |
 | ------------------- | ---------- | -------------------|
 | user_id             | integer    | foreign_key: true  |
-| shopping_address    | string     | null: false        |
+| item_id             | integer    | foreign_key: true  |
 
 ### Association
 
-belongs_to :items
+- belongs_to :item
+- belongs_to :user
+- has_one : address
+
+## addresses テーブル
+
+| Column           | Type     | Options           |
+| ---------------- | ---------| ------------------|
+| postal_code      | string   | null: false       |
+| prefecture       | string   | null: false       |
+| city             | string   | null: false       |
+| banti            | string   | null: false       |
+| building_name    | string   | null: false       |
+| phone_number     | string   | null: false       |
+| buyer_id         | integer  | foreign_key: true |
+
+### Association
+
+-belongs_to :buyer
