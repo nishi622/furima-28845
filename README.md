@@ -81,7 +81,7 @@ Things you may want to cover:
 | Column           | Type     | Options           |
 | ---------------- | ---------| ------------------|
 | postal_code      | string   | null: false       |
-| prefecture       | string   | null: false       |
+| prefecture       | integer  | null: false       |
 | city             | string   | null: false       |
 | banti            | string   | null: false       |
 | building_name    | string   |                   |
