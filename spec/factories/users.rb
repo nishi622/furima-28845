@@ -1,16 +1,4 @@
-# FactoryBot.define do
-#   factory :user do
-#     name                  {Faker::Name.name}
-#     email                 {Faker::Internet.free_email}
-#     password              {Faker::Internet.password(min_length: 6)}
-#     password_confirmation {password}
-#     last_name_kanzi       {Faker::Name.first_name}
-#     first_name_kanzi      {Faker::Name.last_name}
-#     last_name_kana        {Faker::Name.first_name}
-#     first_name_kana       {Faker::Name.last_name}
-#     birthday              {Faker::Date.birthday(min_age: 5, max_age: 90)}
-#   end
-# end
+
 
 FactoryBot.define do
   factory :user do
