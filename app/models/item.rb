@@ -6,9 +6,10 @@ class Item < ApplicationRecord
   belongs_to_active_hash :delivery_area
   belongs_to_active_hash :delivery_day
   has_one_attached :image
+  belongs_to :user
 
-  validates :name, :explanation, :category, :status, :delivery_fee, :delivery_area, :delivery_day, :price, presence: true
+  validates :image, :name, :explanation, :category, :status, :delivery_fee, :delivery_area, :delivery_day, :price, presence: true
   validates :category_id, :status_id, :delivery_fee_id, :delivery_area_id, :delivery_day_id, numericality: { other_than: 1 } 
-  validates :price, numericalty: {greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999}
+  validates :price, numericality: {greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999}
   validates :price, format: {with: /\A[0-9]+\z/}
 end
