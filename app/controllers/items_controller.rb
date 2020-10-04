@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :move_to_index, except: %i[index show]
-  before_action :set_item, only: [:show, :edit]
+  before_action :set_item, only: %i[show edit]
 
   def index
     @items = Item.includes(:user).order('created_at DESC')
